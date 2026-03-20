@@ -130,10 +130,15 @@ npm install
 Create `.env` file
 
 PORT=5000
+
 DB_HOST=localhost
+
 DB_USER=root
+
 DB_PASSWORD=
+
 DB_NAME=whatsapp_clone
+
 JWT_SECRET=super_secret_key
 
 Start server
