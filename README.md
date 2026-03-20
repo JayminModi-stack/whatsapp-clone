@@ -1,3 +1,74 @@
+## Frontend Folder Structure
+```
+frontend/
+│
+├── public/
+│   └── index.html
+│
+├── src/
+│   │
+│   ├── api/
+│   │   └── axios.js      
+│   │
+│   ├── components/
+│   │   ├── ChatDrawer.js
+│   │   ├── ChatList.js
+│   │   ├── ChatWindow.js
+│   │   ├── EmojiPicker.js
+│   │   ├── Header.js
+│   │   ├── MessageBox.js
+│   │   └── StatusViewer.js
+│   │
+│   ├── pages/
+│   │   ├── Chat.js
+│   │   ├── Login.js
+│   │   ├── Register.js
+│   │   └── Status.js
+│   │
+│   ├── theme/
+│   │   └── colors.js
+│   │
+│   ├── utils/
+│   │   └── auth.js
+│   │
+│   ├── App.js
+│   ├── App.test.js
+│   ├── index.js
+│   ├── reportWebVitals.js
+│   ├── setupTests.js
+│   └── styles.css
+│
+├── .env
+├── package.json
+└── README.md
+```
+
+# Installation
+
+## 1. Clone Repository
+
+git clone https://github.com/yourusername/whatsapp-clone.git
+
+cd whatsapp-clone
+
+## 2. Frontend Setup
+
+cd frontend
+
+npm install
+
+Create `.env` file
+
+REACT_APP_API_URL=http://localhost:5000/api
+REACT_APP_SOCKET_URL=http://localhost:5000
+REACT_APP_UPLOAD_URL=http://localhost:5000
+
+Start frontend
+
+npm start
+
+---
+
 ## Backend Folder Structure
 
 ```
@@ -42,12 +113,40 @@ backend/
 ├── server.js
 └── package.json
 ```
+# Installation
 
-# Run Migration
+## 1. Clone Repository
+
+git clone https://github.com/yourusername/whatsapp-clone.git
+
+cd whatsapp-clone
+
+## 2. Backend Setup
+
+cd backend
+
+npm install
+
+Create `.env` file
+
+PORT=5000
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=whatsapp_clone
+JWT_SECRET=super_secret_key
+
+Start server
+
+npm start
+
+## 3. Run Migration
 * npx sequelize-cli db:migrate
 
-# Run Seeder
+## 4. Run Seeder
 * npx sequelize-cli db:seed:all
+
+---
 
 # WhatsApp Clone (React + Node.js + Socket.IO)
 
@@ -71,6 +170,15 @@ This project demonstrates how to build a modern messaging system with real-time 
 
 ---
 
+# Tech Stack
+
+## Frontend
+
+* React
+* Material UI
+* Axios
+* Socket.IO Client
+
 ## Backend
 
 * Node.js
@@ -81,34 +189,14 @@ This project demonstrates how to build a modern messaging system with real-time 
 
 ---
 
-# Installation
+# Future Improvements
 
-## 1. Clone Repository
-
-git clone https://github.com/yourusername/whatsapp-clone.git
-
-cd whatsapp-clone
-
----
-
-# Backend Setup
-
-cd backend
-
-npm install
-
-Create `.env` file
-
-PORT=5000
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=
-DB_NAME=whatsapp_clone
-JWT_SECRET=super_secret_key
-
-Start server
-
-npm start
+* Online / Offline status
+* Typing indicator
+* Read receipts (double tick)
+* Voice messages
+* Message reactions
+* Push notifications
 
 ---
 
@@ -259,16 +347,7 @@ ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
----
 
-# Future Improvements
-
-* Online / Offline status
-* Typing indicator
-* Read receipts (double tick)
-* Voice messages
-* Message reactions
-* Push notifications
 
 ---
 
